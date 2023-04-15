@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "dev": "echo index.ts | entr -s 'yarn ts-node index.ts'"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4",
+    "zod": "^3.21.4"
+  }
+}
