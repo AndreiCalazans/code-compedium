@@ -2,10 +2,15 @@ import Config
 
 # Configure your database
 config :myElixirPhoenixApp, MyElixirPhoenixApp.Repo,
-  username: "postgres",
-  password: "postgres",
-  hostname: "localhost",
-  database: "myelixirphoenixapp_dev",
+  username: "AndreiCalazans",
+  password: System.get_env("NEONDB_PASSWORD") || "default_password",
+  hostname: "ep-twilight-voice-76586706.us-east-2.aws.neon.tech",
+  database: "elixir-phoenix",
+  ssl: true,
+  ssl_opts: [
+    server_name_indication: 'ep-twilight-voice-76586706.us-east-2.aws.neon.tech',
+    verify: :verify_none
+  ],
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
