@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#book-manager {
+    max-width: 600px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+#transactions ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#transactions li {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 5px;
+}

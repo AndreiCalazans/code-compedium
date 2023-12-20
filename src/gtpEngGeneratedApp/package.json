@@ -1,0 +1,13 @@
+{
+  "name": "study-group-book-manager",
+  "version": "1.0.0",
+  "description": "A simple book manager for a study group",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start": "open index.html"
+  },
+  "author": "",
+  "license": "ISC"
+}

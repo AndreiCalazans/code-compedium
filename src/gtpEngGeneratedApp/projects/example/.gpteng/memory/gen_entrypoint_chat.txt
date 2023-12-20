@@ -1,0 +1,5 @@
+```sh
+# There are no dependencies to install for plain HTML, CSS, and JavaScript files.
+# Simply open the HTML file in a web browser to run the codebase.
+xdg-open new_file.html
+```
