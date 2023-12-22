@@ -11,6 +11,7 @@ fn divide(numerator: f64, denominator: f64) -> Result<f64, &'static str> {
 }
 
 pub fn error_handling_example() {
+    println!("------ Running the error handling example ------");
     match divide(10.0, 0.0) {
         Ok(result) => println!("Result: {}", result),
         Err(e) => println!("Error: {}", e),
