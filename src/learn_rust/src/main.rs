@@ -8,6 +8,7 @@ mod collections;
 mod mods;
 mod traits;
 mod lifetimes;
+mod threads;
 
 fn main() {
     println!("Hello Andrei!");
@@ -22,4 +23,5 @@ fn main() {
     mods::front_of_house::hosting::add_to_waitlist(); // You can access submods like this
     traits::traits_example();
     lifetimes::lifetimes_example();
+    threads::threads_example();
 }
