@@ -1,25 +1,23 @@
 use std::{thread, time::Duration, sync::{Arc, Mutex}};
 
+fn do_work(thread_id: &str) {
+    for i in 1..10 {
+        println!("hi number {} from {}!", i, thread_id);
+        thread::sleep(Duration::from_millis(1));
+    }
+}
+
 pub fn threads_example() {
     println!("------ Running the threads example ------");
     let handle = thread::spawn(|| {
-        for i in 1..10 {
-            println!("hi number {} from the spawned thread!", i);
-            thread::sleep(Duration::from_millis(1));
-        }
+        do_work("FIRST THREAD");
     });
 
     let handle_two = thread::spawn(|| {
-        for i in 1..10 {
-            println!("hi number {} from the SECOND spawned thread!", i);
-            thread::sleep(Duration::from_millis(1));
-        }
+        do_work("SECOND THREAD");
     });
 
-    for i in 1..5 {
-        println!("hi number {} from the main thread!", i);
-        thread::sleep(Duration::from_millis(1));
-    }
+    do_work("MAIN THREAD");
 
     handle.join().unwrap();
     handle_two.join().unwrap();
