@@ -9,9 +9,9 @@ mod mods;
 mod traits;
 mod lifetimes;
 mod threads;
+mod asynchronous;
 
 fn main() {
-    println!("Hello Andrei!");
     basics::the_basic();
     funcs::function_examples();
     ownership::ownership_examples();
@@ -24,4 +24,5 @@ fn main() {
     traits::traits_example();
     lifetimes::lifetimes_example();
     threads::threads_example();
+    asynchronous::async_example();
 }
