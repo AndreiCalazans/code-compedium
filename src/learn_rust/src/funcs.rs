@@ -33,4 +33,25 @@ fn square(x: i32) -> i32 {
     x * x
 }
 
+#[cfg(test)]
+mod tests {
+    // This makes everthing available in the parent scope
+    // available in this mod tests scope!!
+    use super::*;
+
+    #[test]
+    fn it_multiplier() {
+        assert_eq!(multiply(2, 3), 6);
+    }
+
+    #[test]
+    fn it_squares() {
+        assert_eq!(square(3), 9);
+    }
+
+    #[test]
+    fn it_applies_fn() {
+        assert_eq!(apply_function(square, 3), 9);
+    }
+}
 
