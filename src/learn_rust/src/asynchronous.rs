@@ -16,7 +16,8 @@ pub async fn async_example() {
 async fn fetch_google() -> Result<(), Box<dyn std::error::Error>> {
     let url = "https://google.com";
     let response = reqwest::get(url).await?;
-    let body = response.text().await?;
-    println!("Response body:\n{}", body);
+    // let body = response.text().await?;
+    // println!("Response body:\n{}", body);
+    println!("Response status: {}", response.status());
     Ok(())
 }
