@@ -1,0 +1,4 @@
+[tasks.run]
+run = "cargo run"
+sources = ["src/**/*.rs"]
+depends = []
