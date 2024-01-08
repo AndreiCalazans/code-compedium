@@ -1,4 +1,5 @@
 
+#[derive(Debug)]
 pub struct User {
     username: String,
     email: String,
@@ -6,6 +7,7 @@ pub struct User {
     active: bool,
 }
 
+#[derive(Debug)]
 pub struct Book {
     uuid: u32,
     author: String,
@@ -36,15 +38,15 @@ struct Color(i32, i32, i32);
 
 pub fn test_structs() {
     let user = make_user();
-    println!("User: {}", user.username);
+    println!("User: {:?}", user);
     let book = make_book();
-    println!("Book: {}", book.title);
+    println!("Book: {:?}", book);
     let user2 = User {
         email: String::from("user2@email.com"),
         username: String::from("Other"),
         ..user
     };
-    println!("User two: {}", user2.email);
+    println!("User two: {:?}", user2);
 
     let black = Color(0, 0, 0);
     println!("Tuple as color: {:?}", black);
