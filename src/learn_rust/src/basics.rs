@@ -44,6 +44,8 @@ pub fn the_basic() {
     // slices are &str is an immutable sequence of UTF-8 characters.
     let slice = &untrimmed_strings[0..5]; // Taking a slice of the String
     println!("Slice: {}", slice);
+    println!("Slice two: {}", &untrimmed_strings[..2]);
+    println!("Slice Three: {}", &untrimmed_strings[2..]);
 }
 
 fn sum(a: i32, b: i32) -> i32 {
