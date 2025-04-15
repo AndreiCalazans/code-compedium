@@ -1,0 +1,20 @@
+{
+  "name": "react-native-modal-manager",
+  "version": "1.0.0",
+  "description": "Native module to manage native modals",
+  "author": "",
+  "license": "MIT",
+  "main": "index.ts",
+  "types": "index.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AndreiCalazans/react-native.git",
+    "directory": "libs/react-native-modal-manager"
+  },
+  "peerDependencies": {
+    "expo": "*",
+    "expo-modules-core": "*",
+    "react": "*"
+  },
+  "private": true
+}
