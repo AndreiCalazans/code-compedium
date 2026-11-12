@@ -1,0 +1,10 @@
+{
+  "name": "moonbit-playground",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "npm run build && python3 -m http.server 8000 --bind 127.0.0.1 --directory web",
+    "test:web": "npm run build && node --test web/bridge.test.mjs"
+  }
+}

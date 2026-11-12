@@ -1,0 +1,6 @@
+import {
+  "playground/moonbit" @playground,
+  "moonbitlang/core/debug",
+}
+
+pkgtype(kind: "executable")

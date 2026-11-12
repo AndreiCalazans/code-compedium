@@ -1,0 +1,11 @@
+import {
+  "playground/moonbit" @game,
+}
+
+pkgtype(kind: "foreign_library")
+
+supported_targets = "js"
+
+options(
+  link: { "js": { "format": "esm" } },
+)

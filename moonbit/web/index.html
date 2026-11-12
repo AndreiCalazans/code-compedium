@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f5ee" />
+    <meta name="description" content="A little friendly competition. A two-player tic-tac-toe game, powered by MoonBit." />
+    <title>Tic Tac Toe — A MoonBit experiment</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23f7f5ee'/%3E%3Cpath d='m20 20 24 24m0-24L20 44' stroke='%23d85c3b' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="masthead">
+        <a class="wordmark" href="./" aria-label="Tic Tac Toe home"><span class="brand-icon" aria-hidden="true">✳</span> little games<span class="wordmark-dot">.</span></a>
+        <span class="edition">NO. 001 <span aria-hidden="true">/</span> THE CLASSICS</span>
+      </header>
+
+      <main>
+        <section class="intro" aria-labelledby="page-title">
+          <div class="eyebrow"><span class="live-dot" aria-hidden="true"></span> TWO PLAYERS. ONE GOOD TIME.</div>
+          <h1 id="page-title">Tic.<br />Tac.<br /><span class="toe">Toe<svg viewBox="0 0 230 24" aria-hidden="true"><path d="M5 16 Q102 -2 223 10 M12 21 Q116 7 215 16" /></svg></span></h1>
+          <p class="intro-copy">A little friendly competition.<br />Pick a side. Make your mark.</p>
+          <div class="how-to"><span class="how-to-icon" aria-hidden="true">↗</span><p>Take turns on the same screen.<br /><strong>Three in a row takes the round.</strong></p></div>
+          <div class="built-with"><span class="moon-icon" aria-hidden="true">◒</span><span>Small game. New language.<br /><a href="https://www.moonbitlang.com/" target="_blank" rel="noreferrer">Made with MoonBit ↗</a></span></div>
+        </section>
+
+        <section class="game-section" aria-label="Tic-tac-toe game">
+          <div class="game-topline"><span class="section-label" id="round-label">ROUND 01</span><span class="local-badge"><span aria-hidden="true">●</span> LOCAL MULTIPLAYER</span></div>
+          <div class="game-card">
+            <div class="status-area">
+              <span class="status-symbol mark-x" id="status-symbol" aria-hidden="true">×</span>
+              <div><h2 id="status" role="status" aria-live="polite" aria-atomic="true">Loading the game…</h2><p id="status-detail">Good things come in threes.</p></div>
+              <span class="turn-tag" id="turn-tag">LET’S PLAY</span>
+            </div>
+            <div class="board" id="board" role="group" aria-label="Game board. X goes first." aria-busy="true">
+              <button class="cell" type="button" data-index="0" aria-label="Row 1, column 1, empty" disabled></button>
+              <button class="cell" type="button" data-index="1" aria-label="Row 1, column 2, empty" disabled></button>
+              <button class="cell" type="button" data-index="2" aria-label="Row 1, column 3, empty" disabled></button>
+              <button class="cell" type="button" data-index="3" aria-label="Row 2, column 1, empty" disabled></button>
+              <button class="cell" type="button" data-index="4" aria-label="Row 2, column 2, empty" disabled></button>
+              <button class="cell" type="button" data-index="5" aria-label="Row 2, column 3, empty" disabled></button>
+              <button class="cell" type="button" data-index="6" aria-label="Row 3, column 1, empty" disabled></button>
+              <button class="cell" type="button" data-index="7" aria-label="Row 3, column 2, empty" disabled></button>
+              <button class="cell" type="button" data-index="8" aria-label="Row 3, column 3, empty" disabled></button>
+            </div>
+            <div class="board-footer"><span id="board-note"><span class="tiny-dot" aria-hidden="true"></span> X always makes the first move</span><button type="button" class="text-button" id="restart" disabled>Restart round <span aria-hidden="true">↻</span></button></div>
+          </div>
+          <div class="scoreboard" aria-label="Session scores">
+            <div class="score-card active" id="x-card"><div class="score-label"><span class="mini-mark mark-x" aria-hidden="true">×</span> PLAYER X</div><strong id="x-score">0</strong><span class="score-caption">WINS</span></div>
+            <div class="score-card draw-card"><div class="score-label"><span class="draw-icon" aria-hidden="true">=</span> ALL SQUARE</div><strong id="draw-score">0</strong><span class="score-caption">DRAWS</span></div>
+            <div class="score-card" id="o-card"><div class="score-label"><span class="mini-mark mark-o" aria-hidden="true">○</span> PLAYER O</div><strong id="o-score">0</strong><span class="score-caption">WINS</span></div>
+          </div>
+          <div class="game-actions"><button type="button" id="next-round" class="primary-button" disabled>Start a fresh round <span aria-hidden="true">↗</span></button><button type="button" class="text-button reset-scores" id="reset-scores" disabled>Reset scores</button></div>
+          <p class="keyboard-hint">No rush. No timer. Just you and a worthy opponent.</p>
+          <noscript><p class="error-message">Enable JavaScript to play this MoonBit game.</p></noscript>
+        </section>
+      </main>
+      <footer class="page-footer"><span>LESS SCROLLING. MORE PLAYING.</span><span>A browser playground <span class="footer-star" aria-hidden="true">✳</span> Built to be explored.</span></footer>
+    </div>
+  </body>
+</html>
